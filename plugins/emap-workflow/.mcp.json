@@ -3,7 +3,9 @@
     "linear": {
       "type": "http",
       "url": "https://mcp.linear.app/sse",
-      "note": "Set LINEAR_API_KEY in your environment before using"
+      "headers": {
+        "x-api-key": "${LINEAR_API_KEY}"
+      }
     }
   }
 }

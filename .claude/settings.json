@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "emap-workflow@emap-dev-plugin": true
+  }
+}
