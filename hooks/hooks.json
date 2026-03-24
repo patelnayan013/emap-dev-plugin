@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $(dirname $0)/scripts/validate-branch.sh",
+            "statusMessage": "Validating branch naming convention..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $(dirname $0)/scripts/enforce-review.sh",
+            "statusMessage": "Tracking changes for review..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $(dirname $0)/scripts/session-summary.sh",
+            "statusMessage": "Generating session summary..."
+          }
+        ]
+      }
+    ]
+  }
+}

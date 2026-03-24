@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash(git *)",
+      "Bash(php artisan *)",
+      "Bash(npx eslint *)",
+      "Bash(./vendor/bin/php-cs-fixer *)",
+      "Bash(gh pr *)"
+    ]
+  }
+}

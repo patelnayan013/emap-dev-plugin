@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "linear": {
+      "type": "http",
+      "url": "https://mcp.linear.app/sse",
+      "note": "Set LINEAR_API_KEY in your environment before using"
+    }
+  }
+}
