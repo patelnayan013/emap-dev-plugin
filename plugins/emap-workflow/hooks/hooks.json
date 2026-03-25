@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $(dirname $0)/scripts/validate-branch.sh",
+            "command": "bash plugins/emap-workflow/hooks/scripts/validate-branch.sh",
             "statusMessage": "Validating branch naming convention..."
           }
         ]
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $(dirname $0)/scripts/enforce-review.sh",
+            "command": "bash plugins/emap-workflow/hooks/scripts/enforce-review.sh",
             "statusMessage": "Tracking changes for review..."
           }
         ]
@@ -29,7 +29,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $(dirname $0)/scripts/session-summary.sh",
+            "command": "bash plugins/emap-workflow/hooks/scripts/session-summary.sh",
             "statusMessage": "Generating session summary..."
           }
         ]
