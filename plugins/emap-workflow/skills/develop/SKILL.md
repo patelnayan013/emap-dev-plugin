@@ -9,6 +9,8 @@ effort: max
 
 ## Development Phase — Implement Task $ARGUMENTS
 
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+
 ### Step 1: Load the Approved Plan
 Read the development plan from `.claude/plans/$ARGUMENTS.md`.
 If no plan exists, inform the developer:

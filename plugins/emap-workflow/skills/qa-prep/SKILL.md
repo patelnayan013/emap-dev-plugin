@@ -11,6 +11,8 @@ effort: high
 
 Generate comprehensive test scenarios for **$ARGUMENTS**.
 
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+
 ### Step 1: Gather Context
 
 **From Linear:**

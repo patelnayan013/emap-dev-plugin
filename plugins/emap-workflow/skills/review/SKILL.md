@@ -10,6 +10,8 @@ effort: high
 
 Review all files changed compared to the main branch.
 
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+
 ### Step 1: Identify Changed Files
 Run: `git diff main...HEAD --name-only` to get the list of changed files.
 If no changes found, inform the user and exit.

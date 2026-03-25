@@ -10,6 +10,8 @@ effort: high
 
 Verify code quality standards on all changed files.
 
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+
 ### Step 1: Automated Linting
 
 **PHP — Run PHP CS Fixer:**

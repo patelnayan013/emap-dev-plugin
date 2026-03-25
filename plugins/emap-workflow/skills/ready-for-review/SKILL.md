@@ -7,6 +7,8 @@ allowed-tools: Read, Grep, Glob, Bash, mcp__claude_ai_Slack__slack_send_message,
 
 ## Ready for Manager Review — Final Handoff
 
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+
 ### Step 1: Pre-Flight Verification
 Verify all workflow steps were completed:
 
@@ -64,7 +66,6 @@ gh pr edit --add-reviewer <reviewer>
 ```
 
 ### Step 4: Update Linear
-If Linear MCP is available:
 - Update task status to "In Review" or "Ready for Review"
 - Add PR link as a comment
 
