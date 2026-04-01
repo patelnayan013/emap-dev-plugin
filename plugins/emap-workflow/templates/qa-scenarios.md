@@ -1,4 +1,4 @@
-# QA Test Scenarios: [LINEAR-ID] — [Task Title]
+# QA Test Scenarios: [JIRA-ID] — [Task Title]
 
 ## Feature Overview
 [Brief description of what was implemented]

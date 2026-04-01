@@ -1,6 +1,6 @@
 {
   "name": "emap-workflow",
-  "description": "Automated tier-based development workflow for EMAP team - Linear integration, planning, review loops, security audits, and QA automation",
+  "description": "Automated tier-based development workflow for EMAP team - Jira integration, planning, review loops, security audits, and QA automation",
   "version": "1.0.1",
   "author": {
     "name": "EMAP EPD Team"

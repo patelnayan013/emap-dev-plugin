@@ -10,7 +10,7 @@ effort: high
 
 Verify code quality standards on all changed files.
 
-!`cat ${CLAUDE_PLUGIN_ROOT}/templates/linear-mcp-check.md`
+!`cat ${CLAUDE_PLUGIN_ROOT}/templates/jira-mcp-check.md`
 
 ### Step 1: Automated Linting
 

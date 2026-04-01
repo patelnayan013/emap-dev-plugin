@@ -10,7 +10,7 @@ effort: high
 
 Review all files changed compared to the main branch.
 
-!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/jira-mcp-check.md`
 
 ### Step 1: Identify Changed Files
 Run: `git diff main...HEAD --name-only` to get the list of changed files.
@@ -47,7 +47,7 @@ For each changed file, check:
 
 **General:**
 - No commented-out code blocks
-- No TODO/FIXME without a Linear task reference
+- No TODO/FIXME without a Jira issue reference
 - Consistent naming conventions
 - No duplicate logic — check if similar logic exists elsewhere
 - Functions under 50 lines (suggest splitting if longer)

@@ -2,12 +2,12 @@
 name: ready-for-review
 description: Mark PR as ready for manager review after all checks and QA pass. Final handoff step.
 disable-model-invocation: true
-allowed-tools: Read, Grep, Glob, Bash, mcp__claude_ai_Slack__slack_send_message, mcp__linear__*
+allowed-tools: Read, Grep, Glob, Bash, mcp__claude_ai_Slack__slack_send_message, mcp__jira__*
 ---
 
 ## Ready for Manager Review — Final Handoff
 
-!`cat ${CLAUDE_PLUGIN_ROOT}/templates/linear-mcp-check.md`
+!`cat ${CLAUDE_PLUGIN_ROOT}/templates/jira-mcp-check.md`
 
 ### Step 1: Pre-Flight Verification
 Verify all workflow steps were completed:
@@ -28,7 +28,7 @@ gh pr view --json number,title,url 2>/dev/null
 
 **If no PR exists,** create one:
 ```bash
-gh pr create --title "[LINEAR-ID] Brief description" --body "..."
+gh pr create --title "[JIRA-KEY] Brief description" --body "..."
 ```
 
 **If PR exists,** update it.
@@ -36,7 +36,7 @@ gh pr create --title "[LINEAR-ID] Brief description" --body "..."
 PR body should include:
 ```markdown
 ## Summary
-- **Linear Task:** [ID and title]
+- **Jira Issue:** [ID and title]
 - **Plan:** Approved on [date]
 
 ## Changes
@@ -65,7 +65,7 @@ If there are specific reviewers to assign (ask user if not known):
 gh pr edit --add-reviewer <reviewer>
 ```
 
-### Step 4: Update Linear
+### Step 4: Update Jira
 - Update task status to "In Review" or "Ready for Review"
 - Add PR link as a comment
 
@@ -73,7 +73,7 @@ gh pr edit --add-reviewer <reviewer>
 Send Slack notification to #emap-pr-reviews (or ask user for channel):
 ```
 🚀 PR ready for manager review
-Task: [LINEAR-ID] — [title]
+Task: [JIRA-KEY] — [title]
 PR: [PR URL]
 Review: All checks passed
 QA: [N] test scenarios prepared

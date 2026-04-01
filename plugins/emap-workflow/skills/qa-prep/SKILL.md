@@ -1,9 +1,9 @@
 ---
 name: qa-prep
-description: Generate detailed QA test scenarios based on the implemented feature and Linear task requirements
+description: Generate detailed QA test scenarios based on the implemented feature and Jira issue requirements
 disable-model-invocation: true
-argument-hint: <LINEAR-TASK-ID>
-allowed-tools: Read, Grep, Glob, Bash, Agent, mcp__linear__*, mcp__claude_ai_Slack__slack_send_message
+argument-hint: <JIRA-ISSUE-KEY>
+allowed-tools: Read, Grep, Glob, Bash, Agent, mcp__jira__*, mcp__claude_ai_Slack__slack_send_message
 effort: high
 ---
 
@@ -11,11 +11,11 @@ effort: high
 
 Generate comprehensive test scenarios for **$ARGUMENTS**.
 
-!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/jira-mcp-check.md`
 
 ### Step 1: Gather Context
 
-**From Linear:**
+**From Jira:**
 - Fetch task $ARGUMENTS details, acceptance criteria, and requirements
 - Get any linked tasks or parent epic context
 - Check for QA-specific notes or labels

@@ -1,15 +1,15 @@
 ---
 name: develop
-description: Start implementing a Linear task using the approved development plan. Guides the developer through each implementation step.
+description: Start implementing a Jira issue using the approved development plan. Guides the developer through each implementation step.
 disable-model-invocation: true
-argument-hint: <LINEAR-TASK-ID>
-allowed-tools: Read, Edit, Write, Grep, Glob, Bash, Agent, mcp__linear__*, mcp__claude_ai_Slack__slack_send_message
+argument-hint: <JIRA-ISSUE-KEY>
+allowed-tools: Read, Edit, Write, Grep, Glob, Bash, Agent, mcp__jira__*, mcp__claude_ai_Slack__slack_send_message
 effort: max
 ---
 
 ## Development Phase — Implement Task $ARGUMENTS
 
-!`cat ${CLAUDE_PLUGIN_ROOT}/templates/linear-mcp-check.md`
+!`cat ${CLAUDE_PLUGIN_ROOT}/templates/jira-mcp-check.md`
 
 ### Step 1: Load the Approved Plan
 Read the development plan from `.claude/plans/$ARGUMENTS.md`.

@@ -10,7 +10,7 @@ effort: high
 
 Perform a thorough security audit on all files changed compared to main branch.
 
-!`cat ${CLAUDE_PLUGIN_ROOT}/templates/linear-mcp-check.md`
+!`cat ${CLAUDE_PLUGIN_ROOT}/templates/jira-mcp-check.md`
 
 ### Step 1: Get Changed Files
 ```bash

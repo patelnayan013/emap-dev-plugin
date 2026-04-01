@@ -1,26 +1,26 @@
 ---
 name: analyze
-description: Analyze a Linear task and generate a comprehensive development plan. Use when starting work on a new task.
+description: Analyze a Jira issue and generate a comprehensive development plan. Use when starting work on a new task.
 disable-model-invocation: true
-argument-hint: <LINEAR-TASK-ID> [optional developer notes]
-allowed-tools: Read, Grep, Glob, Bash, Agent, mcp__linear__*, mcp__claude_ai_Slack__slack_send_message
+argument-hint: <JIRA-ISSUE-KEY> [optional developer notes]
+allowed-tools: Read, Grep, Glob, Bash, Agent, mcp__jira__*, mcp__claude_ai_Slack__slack_send_message
 effort: high
 ---
 
 ## Task Analysis & Development Plan Generation
 
-**Parse arguments:** The first argument is the Linear task ID. Everything after the task ID is the developer's notes/thoughts for planning (optional).
+**Parse arguments:** The first argument is the Jira issue key. Everything after the issue key is the developer's notes/thoughts for planning (optional).
 - Example: `/emap-workflow:analyze EMAP-1234 I think we should use the existing notification service and add a new event listener`
 - Extract the task ID (first argument) and developer notes (remaining text, if any).
 
-You are analyzing Linear task to generate a development plan.
+You are analyzing a Jira issue to generate a development plan.
 
-!`cat ${CLAUDE_PLUGIN_ROOT}/templates/linear-mcp-check.md`
+!`cat ${CLAUDE_PLUGIN_ROOT}/templates/jira-mcp-check.md`
 
 ### Step 1: Fetch Task Details
-Use the Linear MCP tools to fetch the task:
-- Get title, description, acceptance criteria, labels, priority, assignee
-- Get linked/blocking tasks and dependencies
+Use the Atlassian Jira MCP tools to fetch the issue:
+- Get the summary, description, acceptance criteria, labels, priority, assignee, and sprint if present
+- Get linked/blocking issues and dependencies
 - Get any comments or attachments with additional context
 
 **Developer Notes:** If the developer provided additional notes/thoughts, incorporate them into the analysis. These notes represent the developer's initial ideas, preferred approach, or constraints to consider during planning. Display these notes in the plan under a "Developer Input" section and factor them into the technical approach.
@@ -64,8 +64,8 @@ Display the full plan to the developer and ask for their review:
 
 **Do NOT proceed to Step 6 until the developer explicitly approves the plan.**
 
-### Step 6: Update Linear Task
-- Add the approved plan as a comment on the Linear task
+### Step 6: Update Jira Issue
+- Add the approved plan as a comment on the Jira issue
 - Update task status to "Plan Ready" (or equivalent workflow state)
 
 ### Step 7: Notify Team
@@ -79,4 +79,4 @@ Awaiting senior review.
 ```
 
 ### Output
-Confirm that the plan has been approved, saved, posted to Linear, and shared on Slack.
+Confirm that the plan has been approved, saved, posted to Jira, and shared on Slack.
