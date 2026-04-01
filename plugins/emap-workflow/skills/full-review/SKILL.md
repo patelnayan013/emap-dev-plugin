@@ -11,7 +11,7 @@ effort: max
 Run ALL review checks in sequence. If ANY check finds issues, fix them and re-run
 ALL checks from the beginning. Continue until all pass (maximum 3 iterations).
 
-!`cat ${CLAUDE_SKILL_DIR}/../../templates/linear-mcp-check.md`
+!`cat ${CLAUDE_SKILL_DIR}/../../templates/jira-mcp-check.md`
 
 ### Pre-Check
 1. Verify there are changes to review: `git diff main...HEAD --name-only`

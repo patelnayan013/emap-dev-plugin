@@ -1,6 +1,6 @@
 ---
 name: bug-finder
-description: Multi-agent adversarial bug finder. Spawns 6 specialized agents across 3 rounds to find bugs, security issues, performance problems, and edge cases. Use this skill whenever someone asks to find bugs, review code changes, analyze a PR, investigate logs, check a GitHub issue, look at a Jira/Linear ticket, or wants a bug report. Triggers on: "find bugs", "review this PR", "check these changes", "analyze this issue", "something is broken", "look at these logs", "what could go wrong", "audit this", "test this feature", "edge cases", "security review", or any request to investigate potentially broken code. Always use this skill even if the user only pastes a snippet — partial analysis is better than none.
+description: Multi-agent adversarial bug finder. Spawns 6 specialized agents across 3 rounds to find bugs, security issues, performance problems, and edge cases. Use this skill whenever someone asks to find bugs, review code changes, analyze a PR, investigate logs, check a GitHub issue, look at a Jira ticket, or wants a bug report. Triggers on: "find bugs", "review this PR", "check these changes", "analyze this issue", "something is broken", "look at these logs", "what could go wrong", "audit this", "test this feature", "edge cases", "security review", or any request to investigate potentially broken code. Always use this skill even if the user only pastes a snippet — partial analysis is better than none.
 ---
 
 # Bug Finder
@@ -37,7 +37,7 @@ Round 2 agents receive **only** round-1 findings — no project context, no sour
 |---|---|
 | GitHub PR link | `gh pr diff <N>` + `gh pr view <N> --json files,additions,deletions,body`. Read changed files. |
 | GitHub issue link | `gh issue view <N> --json title,body,comments,labels`. Read related code files. |
-| Jira/Linear ticket | WebFetch the URL. Extract bug description and affected area. |
+| Jira ticket | WebFetch the URL. Extract bug description and affected area. |
 | Code diff / changed files | Use directly. |
 | Error logs | Read stack trace files at the relevant line numbers. |
 | Screenshot | Identify the UI component, read relevant code. |

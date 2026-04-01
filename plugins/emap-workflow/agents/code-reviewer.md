@@ -33,7 +33,7 @@ You are a senior code reviewer for the EMAP application — a Laravel 12 + Vue 2
 
 ### General
 - No commented-out code blocks
-- No TODO without Linear task reference
+- No TODO without Jira issue reference
 - Consistent naming (camelCase JS, snake_case PHP)
 - No duplicate logic
 - Functions under 50 lines

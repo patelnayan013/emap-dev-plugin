@@ -1,7 +1,7 @@
-# Development Plan: [LINEAR-ID] — [Task Title]
+# Development Plan: [JIRA-KEY] — [Task Title]
 
 ## Task Summary
-- **Linear ID:** [ID]
+- **Jira Key:** [ID]
 - **Priority:** [Priority]
 - **Assignee:** [Name]
 - **Sprint:** [Sprint]
@@ -9,7 +9,7 @@
 
 ## Requirements Analysis
 ### Acceptance Criteria
-- [ ] [Criteria from Linear task]
+- [ ] [Criteria from Jira issue]
 
 ### Dependencies
 - [List any blocking tasks or external dependencies]
